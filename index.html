@@ -1,24 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-  <head>
-    <meta charset="UTF-8">
-    <title>My First CRUD App</title>
-    <link rel="stylesheet" href="app.css">
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+<html lang="en">
 
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <input type="text" class="user-input-title" placeholder="Enter the Title">
-  <textarea class="user-input-body" placeholder="Enter the body of text"></textarea>
+  <title>Daily Journal</title>
 
-  <button class="add-text-btn">add text</button>
-  <button class="del-text-btn">delete text</button>
+  <link rel="stylesheet" href="app.css">
 
-  <div class="display"></div>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header"><h1>Daily Diary</h1>
+    </header>
+    <form>
+      <textarea id="text_box" placeholder="Tell Me About Your Day" required></textarea>
+      <div>
+        <button name="submit" type="submit">Submit Entry</button>
+      </div>
+    </form>
+
+
+    <h2>Past Entries</h2>
+
+    <button id="clear_all">Clear All</button>
+    <div id="de"></div>
+
+
+
+  </div>
+</body>
+
 </html>

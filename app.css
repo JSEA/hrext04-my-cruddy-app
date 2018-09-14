@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+
+}
+
+#text_box {
+  font-size: 18px;
+  height: 300px;
+  width: 600px;
+  text-align: left;
+}
+
+.journal_entry {
+  width: 600px;
+}
+
+article {
+  /* background-color: white; */
+  border-bottom: 0.5px solid grey;
+  font-family: sans-serif;
+  font-size: 14px;
+  height: auto;
+  line-height: 27px;
+  margin-top: 50px;
+  min-height: 50px;
+  padding-left: 5px;
+  text-align: left;
+  width: 600px;
+  /* padding-left: 5px; */
+}
