@@ -20,9 +20,10 @@ $(document).ready(function() {
   var entry = function(text) {
     var editDelete = "<br><button type='button' id = 'edit-text-btn'> Edit </button> <button type='button' id = 'del-text-btn'> Delete </button> <br>"
     var article = document.createElement('article');
+    var time = moment(new Date()).format('MMMM Do YYYY, @ hA');
     article.setAttribute('id', 'ent');
-    article.innerHTML = 'On' + " " + moment(new Date()).format('MMMM Do YYYY, @ hA') + " you wrote:" + " " + text + editDelete;
-    document.getElementById('de').insertBefore(article, document.body.childNodes[1].children[4].children[0]);
+    article.innerHTML = 'On' + " " + time.bold() + " you wrote:" + " " + text + editDelete;
+    document.getElementById('de').insertBefore(article, document.body.childNodes[1].children[1].children[4].children[0]);
 
     //delete a journal entry
     document.getElementById('del-text-btn').addEventListener('click', function() {
@@ -32,6 +33,11 @@ $(document).ready(function() {
         localStorage.setItem('entries', JSON.stringify(entryArray));
         article.remove();
       }
+    });
+
+    //edit a journal entry
+    document.getElementById('edit-text-btn').addEventListener('click', function() {
+
     });
   };
 
@@ -45,7 +51,7 @@ $(document).ready(function() {
     input.value = "";
   });
 
-  data.forEach(item => {
+  data.forEach(function(item) {
     entry(item);
   });
 
